@@ -127,7 +127,7 @@ One of the standout features of RatInAMaze is its ability to visualize the Backt
 
 ### Example Visualization
 
-[Insert flowchart or visualization image here]
+![Insert flowchart or visualization image here](https://github.com/harshsinghinf/RatInAMaze/blob/master/Flowchart.png)
 
 The above flowchart illustrates how the backtracking algorithm navigates through the maze, making decisions at each checkpoint and backtracking upon reaching terminal nodes.
 
