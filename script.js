@@ -325,6 +325,7 @@ loadgame.addEventListener("click", () => {
       createMaze2();
       mazeCreated = true; // Mark maze as created
     }
+    restartGame();
   } else {
     closeGame2();
     loadgame.textContent = "Load Game";
@@ -332,6 +333,16 @@ loadgame.addEventListener("click", () => {
     mazeCreated = false; // Reset maze creation status
   }
 });
+function resetGame() {
+  resetFlag = true; // Set reset flag to stop any ongoing processes
+  clearOngoingDelays(); // Stop all ongoing delays
+
+  maze2.innerHTML = ""; // Clear the maze
+  mazeCreated = false; // Mark the maze as not created for next load
+
+  // Optionally, reset any other game state variables or elements here
+  restartGame(); // Reinitialize the game elements
+}
 
 function openGame2() {
   game2.style.display = "flex";
@@ -422,7 +433,6 @@ let food2 = document.getElementById("food2");
 function createMaze2() {
   //Function to create the Maze
   //1 is empty space, 0 is wall, 2 is rat's position,3 is food's position
-  maze2.innerHTML = "";
   for (let i = 0; i < mazearray2.length; i++) {
     let row = document.createElement("div");
     row.classList.add("row");
@@ -765,7 +775,6 @@ function restartGame() {
 
   // Clear the maze and reinitialize the game elements
   maze2.innerHTML = ""; // Clear the maze
-  mazeCreated = false; // Mark the maze as not created for next load
 
   maze2.innerHTML =
     '<img id="rat2" src="ratImage.jpg" alt="Rat" width="45px" height="45px" />\
