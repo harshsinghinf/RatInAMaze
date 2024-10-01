@@ -311,6 +311,7 @@ document.addEventListener("DOMContentLoaded", function () {
   wordflick();
 });
 
+const game2 = document.querySelector(".game2");
 let loadgame = document.querySelector("#loadGame");
 let mazeCreated = false; // Track whether the maze has been created
 
