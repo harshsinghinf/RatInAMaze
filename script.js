@@ -311,13 +311,25 @@ document.addEventListener("DOMContentLoaded", function () {
   wordflick();
 });
 
+let loadgame = document.querySelector("#loadGame");
+loadgame.addEventListener("click", () => {
+  if (loadgame.textContent === "Load Game") {
+    openGame2();
+    loadgame.textContent = "Close Game";
+  } else {
+    closeGame2();
+    loadgame.textContent = "Load Game";
+    resetGame(); // Stop all ongoing processes and reset the game
+  }
+});
+
 const game2 = document.querySelector(".game2");
+
 function openGame2() {
-  const game2 = document.querySelector(".game2");
   game2.style.display = "flex";
 }
+
 function closeGame2() {
-  const game2 = document.querySelector(".game2");
   game2.style.display = "none";
 }
 
@@ -579,12 +591,12 @@ let msec = 1000;
 //   return false; // No path found
 // }
 
-let loadgame = document.querySelector("#loadGame");
-loadgame.addEventListener("click", () => {
-  if (loadgame.textContent == "Load Game") openGame2();
-  loadgame.innerHTML = "Close Game";
-  createMaze2();
-});
+// let loadgame = document.querySelector("#loadGame");
+// loadgame.addEventListener("click", () => {
+//   if (loadgame.textContent == "Load Game") openGame2();
+//   loadgame.innerHTML = "Close Game";
+//   createMaze2();
+// });
 
 let twoX = document.querySelector(".twoX");
 let threeX = document.querySelector(".threeX");
