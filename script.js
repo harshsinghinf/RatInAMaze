@@ -336,7 +336,7 @@ loadgame.addEventListener("click", () => {
 function resetGame() {
   resetFlag = true; // Set reset flag to stop any ongoing processes
   clearOngoingDelays(); // Stop all ongoing delays
-
+  finalPath = [];
   maze2.innerHTML = ""; // Clear the maze
   mazeCreated = false; // Mark the maze as not created for next load
 
@@ -786,6 +786,7 @@ function restartGame() {
   // Recreate the maze with the new level
   createMaze2();
 
+  finalPath = [];
   // Reset visited and path arrays
   resetVisAndPath();
 
