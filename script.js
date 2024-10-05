@@ -112,8 +112,8 @@ level.addEventListener("change", () => {
       console.log("Invalid Level Value");
   }
   maze.innerHTML =
-    '<img id="rat" src="ratImage.jpg" alt="Rat" width="45px" height="45px" />\
-  <img id="food" src="cheese_transparent.png" alt="Cheese" width="45px" height="45px" />';
+    '<img id="rat" src="ratImage.jpg" alt="Rat" width="22.5px" height="22.5px" />\
+  <img id="food" src="cheese_transparent.png" alt="Cheese" width="22.5px" height="22.5px" />';
   createMaze(); //After switching Maze has to be Re-created according to new level matrix
 });
 
@@ -172,13 +172,13 @@ function getFoodPosition() {
 }
 
 function setRatPosition(x, y) {
-  rat.style.top = x * 50 + 3 + "px";
-  rat.style.left = y * 50 + 3 + "px";
+  rat.style.top = x * 25 + 1.5 + "px";
+  rat.style.left = y * 25 + 1.5 + "px";
 }
 
 function setFoodPosition(x, y) {
-  rat.style.bottom = x * 50 + 3 + "px";
-  rat.style.right = y * 50 + 3 + "px";
+  rat.style.bottom = x * 25 + 1.5 + "px";
+  rat.style.right = y * 25 + 1.5 + "px";
 }
 
 //Event Listener to control the Rat
@@ -191,10 +191,10 @@ document.addEventListener("keydown", (e) => {
   let foodTop = food.offsetTop;
   let posRat = getRatPosition();
   if (e.key == "ArrowRight") {
-    if (ratLeft < (mazearray.length - 1) * 50) {
+    if (ratLeft < (mazearray.length - 1) * 25) {
       if (mazearray[posRat[0]][posRat[1] + 1]) {
         e.preventDefault();
-        ratLeft += 50;
+        ratLeft += 25;
         rat.style.left = ratLeft + "px";
         mazearray[posRat[0]][posRat[1]] = 1;
         mazearray[posRat[0]][posRat[1] + 1] = 2;
@@ -205,7 +205,7 @@ document.addEventListener("keydown", (e) => {
     if (ratLeft > 0) {
       if (mazearray[posRat[0]][posRat[1] - 1]) {
         e.preventDefault();
-        ratLeft -= 50;
+        ratLeft -= 25;
         rat.style.left = ratLeft + "px";
         mazearray[posRat[0]][posRat[1]] = 1;
         mazearray[posRat[0]][posRat[1] - 1] = 2;
@@ -216,7 +216,7 @@ document.addEventListener("keydown", (e) => {
     if (ratTop > 0) {
       if (mazearray[posRat[0] - 1][posRat[1]]) {
         e.preventDefault();
-        ratTop -= 50;
+        ratTop -= 25;
         rat.style.top = ratTop + "px";
         mazearray[posRat[0]][posRat[1]] = 1;
         mazearray[posRat[0] - 1][posRat[1]] = 2;
@@ -224,10 +224,10 @@ document.addEventListener("keydown", (e) => {
     }
   }
   if (e.key == "ArrowDown") {
-    if (ratTop < (mazearray.length - 1) * 50) {
+    if (ratTop < (mazearray.length - 1) * 25) {
       if (mazearray[posRat[0] + 1][posRat[1]]) {
         e.preventDefault();
-        ratTop += 50;
+        ratTop += 25;
         rat.style.top = ratTop + "px";
         mazearray[posRat[0]][posRat[1]] = 1;
         mazearray[posRat[0] + 1][posRat[1]] = 2;
@@ -482,13 +482,13 @@ function getRatPosition2() {
 }
 
 function setRatPosition2(x, y) {
-  rat2.style.top = x * 50 + 3 + "px";
-  rat2.style.left = y * 50 + 3 + "px";
+  rat2.style.top = x * 25 + 1.5 + "px";
+  rat2.style.left = y * 25 + 1.5 + "px";
 }
 
 function setFoodPosition2(x, y) {
-  food2.style.top = x * 50 + 3 + "px";
-  food2.style.left = y * 50 + 3 + "px";
+  food2.style.top = x * 25 + 1.5 + "px";
+  food2.style.left = y * 25 + 1.5 + "px";
 }
 
 var n = mazearray2.length;
@@ -777,8 +777,8 @@ function restartGame() {
   maze2.innerHTML = ""; // Clear the maze
 
   maze2.innerHTML =
-    '<img id="rat2" src="ratImage.jpg" alt="Rat" width="45px" height="45px" />\
-     <img id="food2" src="cheese_transparent.png" alt="Cheese" width="45px" height="45px" />';
+    '<img id="rat2" src="ratImage.jpg" alt="Rat" width="22.5px" height="22.5px" />\
+     <img id="food2" src="cheese_transparent.png" alt="Cheese" width="22.5px" height="22.5px" />';
 
   rat2 = document.getElementById("rat2");
   food2 = document.getElementById("food2");

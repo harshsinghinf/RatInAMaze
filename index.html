@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RatInAMaze</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
   <body onload="createMaze()">
@@ -19,13 +19,13 @@
       </select>
       <div class="gamealign">
         <div id="maze-container">
-          <img id="rat" src="ratImage.jpg" alt="Rat" width="45px" height="45px" />
+          <img id="rat" src="ratImage.jpg" alt="Rat" width="22.5px" height="22.5px" />
           <img
             id="food"
             src="cheese_transparent.png"
             alt="Cheese"
-            width="45px"
-            height="45px"
+            width="22.5px"
+            height="22.5px"
           />
         </div>
         <div id="myModal" class="modal">
@@ -67,7 +67,7 @@
       <div class="textcontent">Backtracking is like trying different paths, and when you hit a dead end, you backtrack to the last choice and try a different route. In this article, we'll explore the basics of backtracking, how it works, and how it can help solve all sorts of challenging problems. It's like a method for finding the right way through a complex choices.</div>
       <h1 class="headings">What is BACKTRACKING?</h1>
       <div class="textcontent">Backtracking is a problem-solving algorithmic technique that involves finding a solution incrementally by trying different options and undoing them if they lead to a dead end. It is commonly used in situations where you need to explore multiple possibilities to solve a problem, like searching for a path in a maze or solving puzzles like Sudoku. When a dead end is reached, the algorithm backtracks to the previous decision point and explores a different path until a solution is found or all possibilities have been exhausted.</div>
-      <center><div style="background-color: #ffc18b;border-radius: 20px;padding: 20px; width: 90%;font-size: 3rem;text-align-last: left;">Backtracking can be defined as a general algorithmic technique that considers searching every possible combination in order to solve a computational problem.</div></center>
+      <center><div style="background-color: #ffc18b;border-radius: 10px;padding: 10px; width: 90%;font-size: 1.5rem;text-align-last: left;">Backtracking can be defined as a general algorithmic technique that considers searching every possible combination in order to solve a computational problem.</div></center>
       <h1 class="headings">Basic Terminologies</h1>
       <div class="textcontent">
         <ul>
@@ -84,7 +84,7 @@
         </ul>
       </div>
       <h1 class="headings">How does Backtracking Works?</h1>
-      <center><div class="btworks" style="background-color: #ffc18b;border-radius: 20px;padding: 20px; width: 90%;font-size: 3rem;text-align-last: left;">As we know backtracking algorithm explores each and every possible path in order to find a valid solution, this exploration of path can be easily understood via given images:<br>
+      <center><div class="btworks" style="background-color: #ffc18b;border-radius: 10px;padding: 10px; width: 90%;font-size: 1.5rem;text-align-last: left;">As we know backtracking algorithm explores each and every possible path in order to find a valid solution, this exploration of path can be easily understood via given images:<br>
         <img class="btflow" src="BacktrackingFlow.png" alt="BackTracking_Flow"><br>
         As shown in the image, “IS”  represents the Initial State where the recursion call starts to find a valid solution.<br>
         C : it represents different Checkpoints for recursive calls
@@ -100,7 +100,7 @@
       </div></center>
       <h1 class="headings">Pseudocode for Backtracking</h1>
       <div class="textcontent">The best way to implement backtracking is through recursion, and all backtracking code can be summarised as per the given Pseudocode: <br><br>
-        <center><div style="background-color: #ffc18b;border-radius: 20px;padding: 20px; width: 90%;font-size: 3rem;text-align-last: left;">
+        <center><div style="background-color: #ffc18b;border-radius: 10px;padding: 10px; width: 90%;font-size: 1.5rem;text-align-last: left;">
           <pre>
 
             void FIND_SOLUTIONS( parameters):
@@ -145,7 +145,7 @@
         </ul>
       </div>
       <h1 class="headings">Rat in a Maze - BackTracking</h1>
-      <div class="explanation" style=" line-height: 1.6; margin: auto; padding: 20px; background-color: #ffc18b; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+      <div class="explanation" style=" line-height: 1.6; margin: auto; padding: 10px; background-color: #ffc18b; border-radius: 4px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);">
         <h1 style="text-align: center; color: #333;">Backtracking in Maze Solving</h1>
         
         <p>Imagine you are helping a rat navigate through a maze to reach a piece of food. The rat starts at a specific point, and your job is to guide it by trying different directions. You don't know the path to the food in advance, so you have to explore all the possible ways the rat can move. This process is called <strong>backtracking</strong>.</p>
@@ -193,7 +193,7 @@
       </div>
     </div>
 
-    <button id="loadGame" style="margin: 20px 50vw; margin-bottom: 10vh;">Load Game</button>
+    <button id="loadGame" style="margin: 20px 50vw; margin-bottom: 7vh;">Load Game</button>
 
     <div class="game2">
       <div class="title">RAT IN A MAZE</div>
@@ -207,13 +207,13 @@
       
       <div class="gamealign">
         <div id="maze-container2">
-          <img id="rat2" src="ratImage.jpg" alt="Rat" width="45px" height="45px" />
+          <img id="rat2" src="ratImage.jpg" alt="Rat" width="24.5px" height="24.5px" />
           <img
             id="food2"
             src="cheese_transparent.png"
             alt="Cheese"
-            width="45px"
-            height="45px"
+            width="24.5px"
+            height="24.5px"
           />
         </div>
         <div class="buttons">
